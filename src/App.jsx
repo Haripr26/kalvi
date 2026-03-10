@@ -1,14 +1,12 @@
-import "./styles/global.css";
-import { AuthProvider } from "./context/AuthContext";
-import { ExamProvider } from "./context/ExamContext";
-import AppRoutes        from "./routes/AppRoutes";
+/**
+ * App.jsx
+ * Root component — just mounts the router.
+ * Keep this file thin; routing lives in AppRouter.jsx.
+ */
+
+import React from "react";
+import AppRouter from "./router/AppRouter";
 
 export default function App() {
-  return (
-    <AuthProvider>
-      <ExamProvider>
-        <AppRoutes />
-      </ExamProvider>
-    </AuthProvider>
-  );
+  return <AppRouter />;
 }
